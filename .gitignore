@@ -15,3 +15,6 @@
 /data/places365_val.txt
 /data/LSUN_resize/
 /checkpoints/
+
+__pycache__/
+*.pyc
