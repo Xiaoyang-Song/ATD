@@ -125,6 +125,12 @@ def get_out_testing_datasets(out_names):
             
             returned_out_names.append(name)
             out_datasets.append(coil_100)
+
+        elif name == 'cifar10-svhn':
+            svhn = torchvision.datasets.SVHN(root='./data', split='test', download=True, transform=transforms.Compose([transforms.ToTensor(),
+                                                                                                          transforms.Resize(32)]))
+            returned_out_names.append(name)
+            out_datasets.append(svhn)
         
         else:
           print(name, ' dataset is not implemented.')
