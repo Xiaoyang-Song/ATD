@@ -1,8 +1,10 @@
 import cv2
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, TensorDataset, Subset
 import torchvision
 from torchvision import transforms
+import os
+import numpy as np
 
 
 def food_loader(path):
@@ -10,19 +12,42 @@ def food_loader(path):
     img=cv2.resize(img,(32,32))
     return img
 
-def get_out_training_loaders(batch_size):
+def get_out_training_loaders(batch_size, ood_dset=None, regime=None, n_ood=None, valsize=None):
 
-    trainset_out = torchvision.datasets.ImageFolder(root = 'data/food-101/images/', loader=food_loader, 
-                                                    transform = transforms.Compose([transforms.ToPILImage(),
-                                                                                    transforms.RandomChoice(
-                                                                                        [transforms.RandomApply([transforms.RandomAffine(90, translate=(0.15, 0.15), scale=(0.85, 1), shear=None)], p=0.6),
-                                                                                         transforms.RandomApply([transforms.RandomAffine(0, translate=None, scale=(0.5, 0.75), shear=30)], p=0.6),
-                                                                                         transforms.RandomApply([transforms.AutoAugment()], p=0.9),]),
-                                                                                    transforms.ToTensor(),  ]))
-    trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
+    if ood_dset is None:
+        trainset_out = torchvision.datasets.ImageFolder(root = 'data/food-101/images/', loader=food_loader, 
+                                                        transform = transforms.Compose([transforms.ToPILImage(),
+                                                                                        transforms.RandomChoice(
+                                                                                            [transforms.RandomApply([transforms.RandomAffine(90, translate=(0.15, 0.15), scale=(0.85, 1), shear=None)], p=0.6),
+                                                                                            transforms.RandomApply([transforms.RandomAffine(0, translate=None, scale=(0.5, 0.75), shear=30)], p=0.6),
+                                                                                            transforms.RandomApply([transforms.AutoAugment()], p=0.9),]),
+                                                                                        transforms.ToTensor(),  ]))
+        trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
 
-    valset_out = torchvision.datasets.SVHN(root='./data', split='test', download=True, transform=transforms.ToTensor())
-    valloader_out = DataLoader(valset_out, batch_size=batch_size, shuffle=False, num_workers=2)
+        valset_out = torchvision.datasets.SVHN(root='./data', split='test', download=True, transform=transforms.ToTensor())
+        valloader_out = DataLoader(valset_out, batch_size=batch_size, shuffle=False, num_workers=2)
+    else:
+        if ood_dset == 'cifar10-svhn':
+            assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD SVHN dataset of CIFAR10-SVHN experiment."
+            OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "CIFAR10-SVHN", f"OOD-{regime}-{n_ood}.pt")
+            OoD_data, OoD_labels = torch.load(OoD_path)
+
+            trainset_out = TensorDataset(OoD_data, OoD_labels)
+            print(f"Out-of-distribution dataset size: {len(trainset_out)}")
+            trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
+
+        valset_out = torchvision.datasets.ImageFolder(root = 'data/food-101/images/', loader=food_loader, 
+                                                        transform = transforms.Compose([transforms.ToPILImage(),
+                                                                                        transforms.RandomChoice(
+                                                                                            [transforms.RandomApply([transforms.RandomAffine(90, translate=(0.15, 0.15), scale=(0.85, 1), shear=None)], p=0.6),
+                                                                                            transforms.RandomApply([transforms.RandomAffine(0, translate=None, scale=(0.5, 0.75), shear=30)], p=0.6),
+                                                                                            transforms.RandomApply([transforms.AutoAugment()], p=0.9),]),
+                                                                                        transforms.ToTensor(),  ]))
+        
+        valset_out = Subset(valset_out, list(range(10000)))
+        print(f"Validation set size: {len(valset_out)}")
+        valloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
+
 
     return trainloader_out, valloader_out
 

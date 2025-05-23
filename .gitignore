@@ -18,3 +18,5 @@
 
 __pycache__/
 *.pyc
+data/food-101/
+data/food-101.tar.gz

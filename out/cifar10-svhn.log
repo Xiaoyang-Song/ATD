@@ -1,0 +1,18 @@
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Run name: cifar10-svhn
+Files already downloaded and verified
+Out-of-distribution dataset size: 640
+Validation set size: 10000
+Starting Training Loop...
+[0/20][0/176]	Loss_D: 1.4235	Loss_G: 0.6926	D(x): 0.4884	D(x_out): 0.5213	D(G(z)): 0.4901 / 0.5003
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.54486390625
+checkpoint!
+[1/20][0/176]	Loss_D: 1.2713	Loss_G: 0.6911	D(x): 0.5392	D(x_out): 0.4822	D(G(z)): 0.4747 / 0.5010
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.873665625
+checkpoint!
+[2/20][0/176]	Loss_D: 1.1805	Loss_G: 0.6895	D(x): 0.5718	D(x_out): 0.4555	D(G(z)): 0.4655 / 0.5018

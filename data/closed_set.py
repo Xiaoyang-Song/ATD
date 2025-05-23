@@ -5,7 +5,7 @@ from torchvision import transforms
 
 def get_in_training_loaders(in_dataset, batch_size):
 
-    if in_dataset == 'cifar10':
+    if in_dataset == 'cifar10' or in_dataset == 'cifar10-svhn':
         dataset = torchvision.datasets.CIFAR10(root='./data', train=True,
                                           download=True, transform=transforms.ToTensor())
 
@@ -28,7 +28,7 @@ def get_in_training_loaders(in_dataset, batch_size):
 
 def get_in_testing_loader(in_dataset, batch_size):
 
-    if in_dataset == 'cifar10':
+    if in_dataset == 'cifar10' or in_dataset == 'cifar10-svhn':
         testset = torchvision.datasets.CIFAR10(root='./data', train=False,
                                           download=True, transform=transforms.ToTensor())
 

@@ -23,13 +23,18 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_type', default='fea', type=str, choices={'fea', 'pix'})
     parser.add_argument('--training_type', default='adv', type=str, choices={'clean', 'adv'})
-    parser.add_argument('--in_dataset', default='cifar10', type=str, choices={'cifar10', 'cifar100', 'TI'})
+    parser.add_argument('--in_dataset', default='cifar10', type=str, choices={'cifar10', 'cifar100', 'TI', 'cifar10-svhn'})
     
     parser.add_argument('--alpha', default=0.5, type=float)
     parser.add_argument('--batch_size', default=128, type=int)
     parser.add_argument('--num_epochs', default=20, type=int)
     parser.add_argument('--eps', default=8/255, type=float)
     parser.add_argument('--attack_iters', default=10, type=int)
+
+    parser.add_argument('--ood_dset', default=None, type=str)
+    parser.add_argument('--regime', default=None, type=str)
+    parser.add_argument('--n_ood', default=None, type=int)
+    parser.add_argument('--valsize', default=None, type=int)
     
     parser.add_argument('--run_name', default='test', type=str)
     parser.add_argument('--seed', default=0, type=int)
@@ -67,7 +72,12 @@ model = get_feature_extractor_model(training_type, in_dataset)
 trainloader, valloader = get_in_training_loaders(in_dataset, batch_size)
 
 #out dataset
-trainloader_out, valloader_out = get_out_training_loaders(batch_size)
+ood_dset = args.ood_dset
+regime = args.regime
+n_ood = args.n_ood 
+valsize = args.valsize
+
+trainloader_out, valloader_out = get_out_training_loaders(batch_size, ood_dset, regime, n_ood, valsize)
 
 
 #Model DCGAN
