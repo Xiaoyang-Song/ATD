@@ -3,8 +3,10 @@ import torch
 from torch.utils.data import DataLoader, TensorDataset, Subset
 import torchvision
 from torchvision import transforms
+from .dataset import DSET
 import os
 import numpy as np
+from collections import Counter
 
 
 def food_loader(path):
@@ -30,6 +32,16 @@ def get_out_training_loaders(batch_size, ood_dset=None, regime=None, n_ood=None,
         if ood_dset == 'cifar10-svhn':
             assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD SVHN dataset of CIFAR10-SVHN experiment."
             OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "CIFAR10-SVHN", f"OOD-{regime}-{n_ood}.pt")
+            OoD_data, OoD_labels = torch.load(OoD_path)
+
+            trainset_out = TensorDataset(OoD_data, OoD_labels)
+            print(f"Out-of-distribution dataset size: {len(trainset_out)}")
+            trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
+
+        
+        elif ood_dset == 'svhn':
+            assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD SVHN dataset."
+            OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "SVHN", f"OOD-{regime}-{n_ood}.pt")
             OoD_data, OoD_labels = torch.load(OoD_path)
 
             trainset_out = TensorDataset(OoD_data, OoD_labels)
@@ -131,6 +143,13 @@ def get_out_testing_datasets(out_names):
                                                                                                           transforms.Resize(32)]))
             returned_out_names.append(name)
             out_datasets.append(svhn)
+
+        elif name == 'svhn':
+            data_wrapper = DSET('SVHN', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+            dataset = data_wrapper.ood_val
+            print(f"SVHN OOD testing dataset loaded with {len(dataset)} samples.")
+            returned_out_names.append(name)
+            out_datasets.append(dataset)
         
         else:
           print(name, ' dataset is not implemented.')

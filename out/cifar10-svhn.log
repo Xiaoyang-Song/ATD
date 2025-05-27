@@ -2,11 +2,333 @@
   warnings.warn(_create_warning_msg(
 Run name: cifar10-svhn
 Files already downloaded and verified
+Out-of-distribution dataset size: 10240
+Validation set size: 10000
+Starting Training Loop...
+[0/20][0/176]	Loss_D: 1.4254	Loss_G: 0.6926	D(x): 0.4878	D(x_out): 0.5212	D(G(z)): 0.4909 / 0.5003
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9987417578125
+checkpoint!
+[1/20][0/176]	Loss_D: 0.8837	Loss_G: 0.7178	D(x): 0.6979	D(x_out): 0.4121	D(G(z)): 0.3923 / 0.4879
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9994609375
+checkpoint!
+[2/20][0/176]	Loss_D: 0.7648	Loss_G: 1.0804	D(x): 0.7528	D(x_out): 0.3971	D(G(z)): 0.3540 / 0.3401
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9996167578124999
+checkpoint!
+[3/20][0/176]	Loss_D: 0.6814	Loss_G: 1.1028	D(x): 0.7896	D(x_out): 0.3710	D(G(z)): 0.3394 / 0.3324
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.99976921875
+checkpoint!
+[4/20][0/176]	Loss_D: 0.6343	Loss_G: 1.1358	D(x): 0.8124	D(x_out): 0.3588	D(G(z)): 0.3243 / 0.3215
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.99981296875
+checkpoint!
+[5/20][0/176]	Loss_D: 0.5861	Loss_G: 1.1820	D(x): 0.8352	D(x_out): 0.3446	D(G(z)): 0.3108 / 0.3070
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998666406250001
+checkpoint!
+[6/20][0/176]	Loss_D: 0.5472	Loss_G: 1.2245	D(x): 0.8530	D(x_out): 0.3327	D(G(z)): 0.2968 / 0.2943
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998433984375
+[7/20][0/176]	Loss_D: 0.5082	Loss_G: 1.2545	D(x): 0.8706	D(x_out): 0.3201	D(G(z)): 0.2846 / 0.2855
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998517578125
+[8/20][0/176]	Loss_D: 0.4737	Loss_G: 1.3010	D(x): 0.8840	D(x_out): 0.3060	D(G(z)): 0.2737 / 0.2725
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998715234375
+checkpoint!
+[9/20][0/176]	Loss_D: 0.4454	Loss_G: 1.3421	D(x): 0.8943	D(x_out): 0.2918	D(G(z)): 0.2640 / 0.2615
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.99992
+checkpoint!
+[10/20][0/176]	Loss_D: 0.4224	Loss_G: 1.3753	D(x): 0.9045	D(x_out): 0.2884	D(G(z)): 0.2497 / 0.2530
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.99983140625
+[11/20][0/176]	Loss_D: 0.3955	Loss_G: 1.4234	D(x): 0.9125	D(x_out): 0.2735	D(G(z)): 0.2396 / 0.2411
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998648828125
+[12/20][0/176]	Loss_D: 0.3941	Loss_G: 1.4898	D(x): 0.9143	D(x_out): 0.2680	D(G(z)): 0.2312 / 0.2257
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998295703125001
+[13/20][0/176]	Loss_D: 0.3564	Loss_G: 1.5108	D(x): 0.9287	D(x_out): 0.2630	D(G(z)): 0.2143 / 0.2210
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.999897421875
+[14/20][0/176]	Loss_D: 0.3389	Loss_G: 1.5473	D(x): 0.9321	D(x_out): 0.2439	D(G(z)): 0.2133 / 0.2130
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998862109375
+[15/20][0/176]	Loss_D: 0.3099	Loss_G: 1.5621	D(x): 0.9414	D(x_out): 0.2273	D(G(z)): 0.2075 / 0.2099
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9998925390625
+[16/20][0/176]	Loss_D: 0.3062	Loss_G: 1.6239	D(x): 0.9443	D(x_out): 0.2217	D(G(z)): 0.1998 / 0.1974
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.999837421875
+[17/20][0/176]	Loss_D: 0.2896	Loss_G: 1.6800	D(x): 0.9474	D(x_out): 0.2159	D(G(z)): 0.1900 / 0.1866
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9997831640625001
+[18/20][0/176]	Loss_D: 0.2924	Loss_G: 1.7163	D(x): 0.9474	D(x_out): 0.2126	D(G(z)): 0.1819 / 0.1800
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+0.9999085156249999
+[19/20][0/176]	Loss_D: 0.2652	Loss_G: 1.6974	D(x): 0.9571	D(x_out): 0.2083	D(G(z)): 0.1718 / 0.1834
+0.9997601953124999
+/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Run name: cifar10-svhn
+Files already downloaded and verified
 Using downloaded and verified file: ./data/test_32x32.mat
 Out datasets: ['cifar10-svhn']
 
  best_
-cifar10-svhn_0.0:   0%|          | 0/79 [00:00<?, ?it/s]cifar10-svhn_0.0:   1%|▏         | 1/79 [00:01<02:18,  1.78s/it]cifar10-svhn_0.0:   5%|▌         | 4/79 [00:01<00:27,  2.75it/s]cifar10-svhn_0.0:  10%|█         | 8/79 [00:01<00:11,  6.24it/s]cifar10-svhn_0.0:  15%|█▌        | 12/79 [00:02<00:06, 10.14it/s]cifar10-svhn_0.0:  20%|██        | 16/79 [00:02<00:04, 14.12it/s]cifar10-svhn_0.0:  25%|██▌       | 20/79 [00:02<00:03, 18.07it/s]cifar10-svhn_0.0:  30%|███       | 24/79 [00:02<00:02, 21.67it/s]cifar10-svhn_0.0:  35%|███▌      | 28/79 [00:02<00:02, 24.76it/s]cifar10-svhn_0.0:  41%|████      | 32/79 [00:02<00:01, 27.27it/s]cifar10-svhn_0.0:  46%|████▌     | 36/79 [00:02<00:01, 29.46it/s]cifar10-svhn_0.0:  51%|█████     | 40/79 [00:02<00:01, 30.88it/s]cifar10-svhn_0.0:  56%|█████▌    | 44/79 [00:03<00:01, 32.17it/s]cifar10-svhn_0.0:  61%|██████    | 48/79 [00:03<00:00, 33.27it/s]cifar10-svhn_0.0:  66%|██████▌   | 52/79 [00:03<00:00, 33.96it/s]cifar10-svhn_0.0:  71%|███████   | 56/79 [00:03<00:00, 34.34it/s]cifar10-svhn_0.0:  76%|███████▌  | 60/79 [00:03<00:00, 34.44it/s]cifar10-svhn_0.0:  81%|████████  | 64/79 [00:03<00:00, 34.98it/s]cifar10-svhn_0.0:  86%|████████▌ | 68/79 [00:03<00:00, 35.06it/s]cifar10-svhn_0.0:  91%|█████████ | 72/79 [00:03<00:00, 35.22it/s]cifar10-svhn_0.0:  97%|█████████▋| 77/79 [00:03<00:00, 39.08it/s]cifar10-svhn_0.0: 100%|██████████| 79/79 [00:04<00:00, 19.39it/s]
-cifar10-svhn_0.031:   0%|          | 0/79 [00:00<?, ?it/s]cifar10-svhn_0.031:   1%|▏         | 1/79 [00:06<08:39,  6.66s/it]cifar10-svhn_0.031:   3%|▎         | 2/79 [00:12<07:37,  5.94s/it]cifar10-svhn_0.031:   4%|▍         | 3/79 [00:17<07:14,  5.71s/it]cifar10-svhn_0.031:   5%|▌         | 4/79 [00:22<07:00,  5.60s/it]cifar10-svhn_0.031:   6%|▋         | 5/79 [00:28<06:50,  5.54s/it]cifar10-svhn_0.031:   8%|▊         | 6/79 [00:33<06:41,  5.51s/it]cifar10-svhn_0.031:   9%|▉         | 7/79 [00:39<06:34,  5.48s/it]cifar10-svhn_0.031:  10%|█         | 8/79 [00:44<06:28,  5.47s/it]cifar10-svhn_0.031:  11%|█▏        | 9/79 [00:50<06:21,  5.46s/it]cifar10-svhn_0.031:  13%|█▎        | 10/79 [00:55<06:16,  5.45s/it]cifar10-svhn_0.031:  14%|█▍        | 11/79 [01:01<06:10,  5.45s/it]cifar10-svhn_0.031:  15%|█▌        | 12/79 [01:06<06:04,  5.44s/it]cifar10-svhn_0.031:  16%|█▋        | 13/79 [01:11<05:59,  5.44s/it]cifar10-svhn_0.031:  18%|█▊        | 14/79 [01:17<05:53,  5.44s/it]cifar10-svhn_0.031:  19%|█▉        | 15/79 [01:22<05:47,  5.44s/it]cifar10-svhn_0.031:  20%|██        | 16/79 [01:28<05:42,  5.44s/it]cifar10-svhn_0.031:  22%|██▏       | 17/79 [01:33<05:36,  5.43s/it]cifar10-svhn_0.031:  23%|██▎       | 18/79 [01:39<05:31,  5.44s/it]cifar10-svhn_0.031:  24%|██▍       | 19/79 [01:44<05:26,  5.43s/it]cifar10-svhn_0.031:  25%|██▌       | 20/79 [01:49<05:20,  5.43s/it]cifar10-svhn_0.031:  27%|██▋       | 21/79 [01:55<05:15,  5.43s/it]cifar10-svhn_0.031:  28%|██▊       | 22/79 [02:00<05:09,  5.43s/it]cifar10-svhn_0.031:  29%|██▉       | 23/79 [02:06<05:03,  5.43s/it]cifar10-svhn_0.031:  30%|███       | 24/79 [02:11<04:58,  5.43s/it]cifar10-svhn_0.031:  32%|███▏      | 25/79 [02:17<04:52,  5.43s/it]cifar10-svhn_0.031:  33%|███▎      | 26/79 [02:22<04:47,  5.43s/it]cifar10-svhn_0.031:  34%|███▍      | 27/79 [02:27<04:42,  5.42s/it]cifar10-svhn_0.031:  35%|███▌      | 28/79 [02:33<04:36,  5.42s/it]cifar10-svhn_0.031:  37%|███▋      | 29/79 [02:38<04:31,  5.42s/it]cifar10-svhn_0.031:  38%|███▊      | 30/79 [02:44<04:25,  5.42s/it]cifar10-svhn_0.031:  39%|███▉      | 31/79 [02:49<04:20,  5.42s/it]cifar10-svhn_0.031:  41%|████      | 32/79 [02:55<04:14,  5.42s/it]cifar10-svhn_0.031:  42%|████▏     | 33/79 [03:00<04:09,  5.42s/it]cifar10-svhn_0.031:  43%|████▎     | 34/79 [03:05<04:04,  5.42s/it]cifar10-svhn_0.031:  44%|████▍     | 35/79 [03:11<03:58,  5.42s/it]cifar10-svhn_0.031:  46%|████▌     | 36/79 [03:16<03:53,  5.42s/it]cifar10-svhn_0.031:  47%|████▋     | 37/79 [03:22<03:47,  5.42s/it]cifar10-svhn_0.031:  48%|████▊     | 38/79 [03:27<03:42,  5.42s/it]cifar10-svhn_0.031:  49%|████▉     | 39/79 [03:32<03:36,  5.42s/it]cifar10-svhn_0.031:  51%|█████     | 40/79 [03:38<03:31,  5.42s/it]cifar10-svhn_0.031:  52%|█████▏    | 41/79 [03:43<03:26,  5.42s/it]cifar10-svhn_0.031:  53%|█████▎    | 42/79 [03:49<03:20,  5.42s/it]cifar10-svhn_0.031:  54%|█████▍    | 43/79 [03:54<03:15,  5.42s/it]cifar10-svhn_0.031:  56%|█████▌    | 44/79 [04:00<03:09,  5.42s/it]cifar10-svhn_0.031:  57%|█████▋    | 45/79 [04:05<03:04,  5.42s/it]cifar10-svhn_0.031:  58%|█████▊    | 46/79 [04:10<02:58,  5.42s/it]cifar10-svhn_0.031:  59%|█████▉    | 47/79 [04:16<02:53,  5.42s/it]cifar10-svhn_0.031:  61%|██████    | 48/79 [04:21<02:48,  5.42s/it]cifar10-svhn_0.031:  62%|██████▏   | 49/79 [04:27<02:42,  5.42s/it]cifar10-svhn_0.031:  63%|██████▎   | 50/79 [04:32<02:37,  5.42s/it]cifar10-svhn_0.031:  65%|██████▍   | 51/79 [04:38<02:31,  5.42s/it]cifar10-svhn_0.031:  66%|██████▌   | 52/79 [04:43<02:26,  5.42s/it]cifar10-svhn_0.031:  67%|██████▋   | 53/79 [04:48<02:20,  5.42s/it]cifar10-svhn_0.031:  68%|██████▊   | 54/79 [04:54<02:15,  5.42s/it]cifar10-svhn_0.031:  70%|██████▉   | 55/79 [04:59<02:10,  5.42s/it]cifar10-svhn_0.031:  71%|███████   | 56/79 [05:05<02:04,  5.42s/it]cifar10-svhn_0.031:  72%|███████▏  | 57/79 [05:10<01:59,  5.42s/it]cifar10-svhn_0.031:  73%|███████▎  | 58/79 [05:16<01:53,  5.42s/it]cifar10-svhn_0.031:  75%|███████▍  | 59/79 [05:21<01:48,  5.42s/it]cifar10-svhn_0.031:  76%|███████▌  | 60/79 [05:26<01:43,  5.42s/it]cifar10-svhn_0.031:  77%|███████▋  | 61/79 [05:32<01:37,  5.42s/it]cifar10-svhn_0.031:  78%|███████▊  | 62/79 [05:37<01:32,  5.42s/it]cifar10-svhn_0.031:  80%|███████▉  | 63/79 [05:43<01:26,  5.42s/it]cifar10-svhn_0.031:  81%|████████  | 64/79 [05:48<01:21,  5.42s/it]cifar10-svhn_0.031:  82%|████████▏ | 65/79 [05:53<01:15,  5.42s/it]cifar10-svhn_0.031:  84%|████████▎ | 66/79 [05:59<01:10,  5.42s/it]cifar10-svhn_0.031:  85%|████████▍ | 67/79 [06:04<01:05,  5.42s/it]cifar10-svhn_0.031:  86%|████████▌ | 68/79 [06:10<00:59,  5.42s/it]cifar10-svhn_0.031:  87%|████████▋ | 69/79 [06:15<00:54,  5.42s/it]cifar10-svhn_0.031:  89%|████████▊ | 70/79 [06:21<00:48,  5.42s/it]cifar10-svhn_0.031:  90%|████████▉ | 71/79 [06:26<00:43,  5.42s/it]cifar10-svhn_0.031:  91%|█████████ | 72/79 [06:31<00:37,  5.42s/it]cifar10-svhn_0.031:  92%|█████████▏| 73/79 [06:37<00:32,  5.42s/it]cifar10-svhn_0.031:  94%|█████████▎| 74/79 [06:42<00:27,  5.42s/it]cifar10-svhn_0.031:  95%|█████████▍| 75/79 [06:48<00:21,  5.42s/it]cifar10-svhn_0.031:  96%|█████████▌| 76/79 [06:53<00:16,  5.42s/it]cifar10-svhn_0.031:  97%|█████████▋| 77/79 [06:58<00:10,  5.41s/it]cifar10-svhn_0.031:  99%|█████████▊| 78/79 [07:04<00:05,  5.41s/it]cifar10-svhn_0.031: 100%|██████████| 79/79 [07:05<00:00,  4.19s/it]cifar10-svhn_0.031: 100%|██████████| 79/79 [07:05<00:00,  5.39s/it]
-cifar10-svhn_0.0:   0%|          | 0/204 [00:00<?, ?it/s]cifar10-svhn_0.0:   0%|          | 1/204 [00:00<02:53,  1.17it/s]cifar10-svhn_0.0:   2%|▏         | 4/204 [00:00<00:37,  5.28it/s]cifar10-svhn_0.0:   4%|▍         | 8/204 [00:01<00:17, 11.05it/s]cifar10-svhn_0.0:   6%|▌         | 12/204 [00:01<00:11, 16.42it/s]cifar10-svhn_0.0:   8%|▊         | 16/204 [00:01<00:08, 21.35it/s]cifar10-svhn_0.0:  10%|▉         | 20/204 [00:01<00:07, 23.89it/s]cifar10-svhn_0.0:  12%|█▏        | 24/204 [00:01<00:06, 26.29it/s]cifar10-svhn_0.0:  14%|█▎        | 28/204 [00:01<00:06, 28.72it/s]cifar10-svhn_0.0:  16%|█▌        | 32/204 [00:01<00:05, 30.48it/s]cifar10-svhn_0.0:  18%|█▊        | 36/204 [00:01<00:05, 31.79it/s]cifar10-svhn_0.0:  20%|█▉        | 40/204 [00:01<00:05, 32.74it/s]cifar10-svhn_0.0:  22%|██▏       | 44/204 [00:02<00:04, 33.39it/s]cifar10-svhn_0.0:  24%|██▎       | 48/204 [00:02<00:04, 33.59it/s]cifar10-svhn_0.0:  25%|██▌       | 52/204 [00:02<00:04, 33.76it/s]cifar10-svhn_0.0:  27%|██▋       | 56/204 [00:02<00:04, 33.89it/s]cifar10-svhn_0.0:  29%|██▉       | 60/204 [00:02<00:04, 33.25it/s]cifar10-svhn_0.0:  31%|███▏      | 64/204 [00:02<00:04, 34.18it/s]cifar10-svhn_0.0:  33%|███▎      | 68/204 [00:02<00:03, 34.54it/s]cifar10-svhn_0.0:  35%|███▌      | 72/204 [00:02<00:03, 33.92it/s]cifar10-svhn_0.0:  37%|███▋      | 76/204 [00:03<00:03, 34.34it/s]cifar10-svhn_0.0:  39%|███▉      | 80/204 [00:03<00:03, 34.38it/s]cifar10-svhn_0.0:  41%|████      | 84/204 [00:03<00:03, 34.68it/s]cifar10-svhn_0.0:  43%|████▎     | 88/204 [00:03<00:03, 34.89it/s]cifar10-svhn_0.0:  45%|████▌     | 92/204 [00:03<00:03, 35.41it/s]cifar10-svhn_0.0:  47%|████▋     | 96/204 [00:03<00:03, 35.04it/s]cifar10-svhn_0.0:  49%|████▉     | 100/204 [00:03<00:02, 35.33it/s]cifar10-svhn_0.0:  51%|█████     | 104/204 [00:03<00:02, 35.38it/s]cifar10-svhn_0.0:  53%|█████▎    | 108/204 [00:03<00:02, 35.26it/s]cifar10-svhn_0.0:  55%|█████▍    | 112/204 [00:04<00:02, 35.30it/s]cifar10-svhn_0.0:  57%|█████▋    | 116/204 [00:04<00:02, 35.43it/s]cifar10-svhn_0.0:  59%|█████▉    | 120/204 [00:04<00:02, 34.50it/s]cifar10-svhn_0.0:  61%|██████    | 124/204 [00:04<00:02, 34.77it/s]cifar10-svhn_0.0:  63%|██████▎   | 128/204 [00:04<00:02, 35.04it/s]cifar10-svhn_0.0:  65%|██████▍   | 132/204 [00:04<00:02, 34.69it/s]cifar10-svhn_0.0:  67%|██████▋   | 136/204 [00:04<00:01, 34.50it/s]cifar10-svhn_0.0:  69%|██████▊   | 140/204 [00:04<00:01, 34.76it/s]cifar10-svhn_0.0:  71%|███████   | 144/204 [00:04<00:01, 34.54it/s]cifar10-svhn_0.0:  73%|███████▎  | 148/204 [00:05<00:01, 34.70it/s]cifar10-svhn_0.0:  75%|███████▍  | 152/204 [00:05<00:01, 35.36it/s]cifar10-svhn_0.0:  76%|███████▋  | 156/204 [00:05<00:01, 36.25it/s]cifar10-svhn_0.0:  78%|███████▊  | 160/204 [00:05<00:01, 36.06it/s]cifar10-svhn_0.0:  80%|████████  | 164/204 [00:05<00:01, 35.99it/s]cifar10-svhn_0.0:  82%|████████▏ | 168/204 [00:05<00:00, 36.10it/s]cifar10-svhn_0.0:  84%|████████▍ | 172/204 [00:05<00:00, 35.41it/s]cifar10-svhn_0.0:  86%|████████▋ | 176/204 [00:05<00:00, 35.41it/s]cifar10-svhn_0.0:  88%|████████▊ | 180/204 [00:05<00:00, 34.20it/s]cifar10-svhn_0.0:  90%|█████████ | 184/204 [00:06<00:00, 34.31it/s]cifar10-svhn_0.0:  92%|█████████▏| 188/204 [00:06<00:00, 34.38it/s]cifar10-svhn_0.0:  94%|█████████▍| 192/204 [00:06<00:00, 34.64it/s]cifar10-svhn_0.0:  96%|█████████▌| 196/204 [00:06<00:00, 34.34it/s]cifar10-svhn_0.0:  98%|█████████▊| 200/204 [00:06<00:00, 35.22it/s]cifar10-svhn_0.0: 100%|██████████| 204/204 [00:06<00:00, 33.05it/s]cifar10-svhn_0.0: 100%|██████████| 204/204 [00:06<00:00, 29.98it/s]
-cifar10-svhn_0.031:   0%|          | 0/204 [00:00<?, ?it/s]cifar10-svhn_0.031:   0%|          | 1/204 [00:06<21:10,  6.26s/it]cifar10-svhn_0.031:   1%|          | 2/204 [00:11<19:25,  5.77s/it]cifar10-svhn_0.031:   1%|▏         | 3/204 [00:17<18:47,  5.61s/it]cifar10-svhn_0.031:   2%|▏         | 4/204 [00:22<18:27,  5.54s/it]cifar10-svhn_0.031:   2%|▏         | 5/204 [00:27<18:13,  5.49s/it]cifar10-svhn_0.031:   3%|▎         | 6/204 [00:33<18:03,  5.47s/it]cifar10-svhn_0.031:   3%|▎         | 7/204 [00:38<17:54,  5.45s/it]cifar10-svhn_0.031:   4%|▍         | 8/204 [00:44<17:47,  5.44s/it]cifar10-svhn_0.031:   4%|▍         | 9/204 [00:49<17:40,  5.44s/it]cifar10-svhn_0.031:   5%|▍         | 10/204 [00:55<17:34,  5.43s/it]cifar10-svhn_0.031:   5%|▌         | 11/204 [01:00<17:28,  5.43s/it]cifar10-svhn_0.031:   6%|▌         | 12/204 [01:05<17:22,  5.43s/it]cifar10-svhn_0.031:   6%|▋         | 13/204 [01:11<17:16,  5.43s/it]cifar10-svhn_0.031:   7%|▋         | 14/204 [01:16<17:10,  5.42s/it]cifar10-svhn_0.031:   7%|▋         | 15/204 [01:22<17:05,  5.43s/it]cifar10-svhn_0.031:   8%|▊         | 16/204 [01:27<17:00,  5.43s/it]cifar10-svhn_0.031:   8%|▊         | 17/204 [01:33<16:54,  5.42s/it]cifar10-svhn_0.031:   9%|▉         | 18/204 [01:38<16:48,  5.42s/it]cifar10-svhn_0.031:   9%|▉         | 19/204 [01:43<16:43,  5.42s/it]cifar10-svhn_0.031:  10%|▉         | 20/204 [01:49<16:38,  5.42s/it]
+
+cifar10-svhn_0.0:   0%|          | 0/40 [00:00<?, ?it/s]
+cifar10-svhn_0.0:   2%|▎         | 1/40 [00:01<00:50,  1.28s/it]
+cifar10-svhn_0.0:   8%|▊         | 3/40 [00:01<00:13,  2.70it/s]
+cifar10-svhn_0.0:  15%|█▌        | 6/40 [00:01<00:05,  5.93it/s]
+cifar10-svhn_0.0:  25%|██▌       | 10/40 [00:01<00:02, 10.51it/s]
+cifar10-svhn_0.0:  32%|███▎      | 13/40 [00:01<00:02, 13.48it/s]
+cifar10-svhn_0.0:  40%|████      | 16/40 [00:01<00:01, 15.68it/s]
+cifar10-svhn_0.0:  48%|████▊     | 19/40 [00:02<00:01, 16.70it/s]
+cifar10-svhn_0.0:  55%|█████▌    | 22/40 [00:02<00:01, 17.63it/s]
+cifar10-svhn_0.0:  62%|██████▎   | 25/40 [00:02<00:00, 18.24it/s]
+cifar10-svhn_0.0:  70%|███████   | 28/40 [00:02<00:00, 18.75it/s]
+cifar10-svhn_0.0:  78%|███████▊  | 31/40 [00:02<00:00, 19.38it/s]
+cifar10-svhn_0.0:  85%|████████▌ | 34/40 [00:02<00:00, 19.64it/s]
+cifar10-svhn_0.0:  92%|█████████▎| 37/40 [00:02<00:00, 19.84it/s]
+cifar10-svhn_0.0: 100%|██████████| 40/40 [00:03<00:00, 20.19it/s]
+cifar10-svhn_0.0: 100%|██████████| 40/40 [00:03<00:00, 12.72it/s]
+
+cifar10-svhn_0.031:   0%|          | 0/40 [00:00<?, ?it/s]
+cifar10-svhn_0.031:   2%|▎         | 1/40 [00:11<07:09, 11.03s/it]
+cifar10-svhn_0.031:   5%|▌         | 2/40 [00:20<06:28, 10.22s/it]
+cifar10-svhn_0.031:   8%|▊         | 3/40 [00:30<06:08,  9.96s/it]
+cifar10-svhn_0.031:  10%|█         | 4/40 [00:39<05:54,  9.84s/it]
+cifar10-svhn_0.031:  12%|█▎        | 5/40 [00:49<05:42,  9.78s/it]
+cifar10-svhn_0.031:  15%|█▌        | 6/40 [00:59<05:31,  9.74s/it]
+cifar10-svhn_0.031:  18%|█▊        | 7/40 [01:08<05:20,  9.71s/it]
+cifar10-svhn_0.031:  20%|██        | 8/40 [01:18<05:10,  9.70s/it]
+cifar10-svhn_0.031:  22%|██▎       | 9/40 [01:28<05:00,  9.69s/it]
+cifar10-svhn_0.031:  25%|██▌       | 10/40 [01:37<04:50,  9.68s/it]
+cifar10-svhn_0.031:  28%|██▊       | 11/40 [01:47<04:40,  9.68s/it]
+cifar10-svhn_0.031:  30%|███       | 12/40 [01:57<04:30,  9.67s/it]
+cifar10-svhn_0.031:  32%|███▎      | 13/40 [02:06<04:21,  9.67s/it]
+cifar10-svhn_0.031:  35%|███▌      | 14/40 [02:16<04:11,  9.67s/it]
+cifar10-svhn_0.031:  38%|███▊      | 15/40 [02:26<04:01,  9.67s/it]
+cifar10-svhn_0.031:  40%|████      | 16/40 [02:35<03:52,  9.67s/it]
+cifar10-svhn_0.031:  42%|████▎     | 17/40 [02:45<03:42,  9.67s/it]
+cifar10-svhn_0.031:  45%|████▌     | 18/40 [02:55<03:32,  9.67s/it]
+cifar10-svhn_0.031:  48%|████▊     | 19/40 [03:04<03:23,  9.67s/it]
+cifar10-svhn_0.031:  50%|█████     | 20/40 [03:14<03:13,  9.67s/it]
+cifar10-svhn_0.031:  52%|█████▎    | 21/40 [03:24<03:03,  9.67s/it]
+cifar10-svhn_0.031:  55%|█████▌    | 22/40 [03:34<02:54,  9.67s/it]
+cifar10-svhn_0.031:  57%|█████▊    | 23/40 [03:43<02:44,  9.67s/it]
+cifar10-svhn_0.031:  60%|██████    | 24/40 [03:53<02:34,  9.67s/it]
+cifar10-svhn_0.031:  62%|██████▎   | 25/40 [04:03<02:25,  9.67s/it]
+cifar10-svhn_0.031:  65%|██████▌   | 26/40 [04:12<02:15,  9.68s/it]
+cifar10-svhn_0.031:  68%|██████▊   | 27/40 [04:22<02:05,  9.68s/it]
+cifar10-svhn_0.031:  70%|███████   | 28/40 [04:32<01:56,  9.68s/it]
+cifar10-svhn_0.031:  72%|███████▎  | 29/40 [04:41<01:46,  9.67s/it]
+cifar10-svhn_0.031:  75%|███████▌  | 30/40 [04:51<01:36,  9.67s/it]
+cifar10-svhn_0.031:  78%|███████▊  | 31/40 [05:01<01:27,  9.67s/it]
+cifar10-svhn_0.031:  80%|████████  | 32/40 [05:10<01:17,  9.68s/it]
+cifar10-svhn_0.031:  82%|████████▎ | 33/40 [05:20<01:07,  9.67s/it]
+cifar10-svhn_0.031:  85%|████████▌ | 34/40 [05:30<00:58,  9.67s/it]
+cifar10-svhn_0.031:  88%|████████▊ | 35/40 [05:39<00:48,  9.67s/it]
+cifar10-svhn_0.031:  90%|█████████ | 36/40 [05:49<00:38,  9.67s/it]
+cifar10-svhn_0.031:  92%|█████████▎| 37/40 [05:59<00:29,  9.67s/it]
+cifar10-svhn_0.031:  95%|█████████▌| 38/40 [06:08<00:19,  9.67s/it]
+cifar10-svhn_0.031:  98%|█████████▊| 39/40 [06:18<00:09,  9.66s/it]
+cifar10-svhn_0.031: 100%|██████████| 40/40 [06:19<00:00,  7.14s/it]
+cifar10-svhn_0.031: 100%|██████████| 40/40 [06:19<00:00,  9.49s/it]
+
+cifar10-svhn_0.0:   0%|          | 0/102 [00:00<?, ?it/s]
+cifar10-svhn_0.0:   1%|          | 1/102 [00:00<01:33,  1.08it/s]
+cifar10-svhn_0.0:   4%|▍         | 4/102 [00:01<00:20,  4.78it/s]
+cifar10-svhn_0.0:   7%|▋         | 7/102 [00:01<00:11,  8.13it/s]
+cifar10-svhn_0.0:   9%|▉         | 9/102 [00:01<00:09,  9.84it/s]
+cifar10-svhn_0.0:  11%|█         | 11/102 [00:01<00:08, 11.37it/s]
+cifar10-svhn_0.0:  13%|█▎        | 13/102 [00:01<00:06, 13.10it/s]
+cifar10-svhn_0.0:  15%|█▍        | 15/102 [00:01<00:06, 14.13it/s]
+cifar10-svhn_0.0:  17%|█▋        | 17/102 [00:01<00:05, 15.10it/s]
+cifar10-svhn_0.0:  19%|█▊        | 19/102 [00:01<00:05, 15.85it/s]
+cifar10-svhn_0.0:  21%|██        | 21/102 [00:01<00:04, 16.29it/s]
+cifar10-svhn_0.0:  23%|██▎       | 23/102 [00:02<00:04, 16.86it/s]
+cifar10-svhn_0.0:  25%|██▍       | 25/102 [00:02<00:04, 17.03it/s]
+cifar10-svhn_0.0:  26%|██▋       | 27/102 [00:02<00:04, 17.21it/s]
+cifar10-svhn_0.0:  28%|██▊       | 29/102 [00:02<00:04, 17.41it/s]
+cifar10-svhn_0.0:  30%|███       | 31/102 [00:02<00:04, 17.36it/s]
+cifar10-svhn_0.0:  32%|███▏      | 33/102 [00:02<00:03, 17.55it/s]
+cifar10-svhn_0.0:  34%|███▍      | 35/102 [00:02<00:03, 17.14it/s]
+cifar10-svhn_0.0:  36%|███▋      | 37/102 [00:02<00:03, 17.44it/s]
+cifar10-svhn_0.0:  38%|███▊      | 39/102 [00:03<00:03, 17.51it/s]
+cifar10-svhn_0.0:  40%|████      | 41/102 [00:03<00:03, 17.56it/s]
+cifar10-svhn_0.0:  42%|████▏     | 43/102 [00:03<00:03, 17.52it/s]
+cifar10-svhn_0.0:  44%|████▍     | 45/102 [00:03<00:03, 17.44it/s]
+cifar10-svhn_0.0:  46%|████▌     | 47/102 [00:03<00:03, 17.02it/s]
+cifar10-svhn_0.0:  48%|████▊     | 49/102 [00:03<00:03, 17.49it/s]
+cifar10-svhn_0.0:  50%|█████     | 51/102 [00:03<00:02, 17.79it/s]
+cifar10-svhn_0.0:  52%|█████▏    | 53/102 [00:03<00:02, 17.83it/s]
+cifar10-svhn_0.0:  54%|█████▍    | 55/102 [00:03<00:02, 17.73it/s]
+cifar10-svhn_0.0:  56%|█████▌    | 57/102 [00:04<00:02, 17.85it/s]
+cifar10-svhn_0.0:  58%|█████▊    | 59/102 [00:04<00:02, 17.72it/s]
+cifar10-svhn_0.0:  60%|█████▉    | 61/102 [00:04<00:02, 17.81it/s]
+cifar10-svhn_0.0:  62%|██████▏   | 63/102 [00:04<00:02, 17.51it/s]
+cifar10-svhn_0.0:  64%|██████▎   | 65/102 [00:04<00:02, 17.43it/s]
+cifar10-svhn_0.0:  66%|██████▌   | 67/102 [00:04<00:02, 17.39it/s]
+cifar10-svhn_0.0:  68%|██████▊   | 69/102 [00:04<00:01, 17.35it/s]
+cifar10-svhn_0.0:  70%|██████▉   | 71/102 [00:04<00:01, 17.59it/s]
+cifar10-svhn_0.0:  72%|███████▏  | 73/102 [00:04<00:01, 17.54it/s]
+cifar10-svhn_0.0:  74%|███████▎  | 75/102 [00:05<00:01, 17.18it/s]
+cifar10-svhn_0.0:  75%|███████▌  | 77/102 [00:05<00:01, 17.24it/s]
+cifar10-svhn_0.0:  77%|███████▋  | 79/102 [00:05<00:01, 17.84it/s]
+cifar10-svhn_0.0:  79%|███████▉  | 81/102 [00:05<00:01, 17.98it/s]
+cifar10-svhn_0.0:  81%|████████▏ | 83/102 [00:05<00:01, 17.76it/s]
+cifar10-svhn_0.0:  83%|████████▎ | 85/102 [00:05<00:00, 17.83it/s]
+cifar10-svhn_0.0:  85%|████████▌ | 87/102 [00:05<00:00, 18.09it/s]
+cifar10-svhn_0.0:  87%|████████▋ | 89/102 [00:05<00:00, 18.07it/s]
+cifar10-svhn_0.0:  89%|████████▉ | 91/102 [00:05<00:00, 17.72it/s]
+cifar10-svhn_0.0:  91%|█████████ | 93/102 [00:06<00:00, 17.67it/s]
+cifar10-svhn_0.0:  93%|█████████▎| 95/102 [00:06<00:00, 17.87it/s]
+cifar10-svhn_0.0:  95%|█████████▌| 97/102 [00:06<00:00, 18.25it/s]
+cifar10-svhn_0.0:  97%|█████████▋| 99/102 [00:06<00:00, 17.49it/s]
+cifar10-svhn_0.0: 100%|██████████| 102/102 [00:06<00:00, 13.65it/s]
+cifar10-svhn_0.0: 100%|██████████| 102/102 [00:06<00:00, 15.03it/s]
+
+cifar10-svhn_0.031:   0%|          | 0/102 [00:00<?, ?it/s]
+cifar10-svhn_0.031:   1%|          | 1/102 [00:10<17:44, 10.54s/it]
+cifar10-svhn_0.031:   2%|▏         | 2/102 [00:20<16:42, 10.03s/it]
+cifar10-svhn_0.031:   3%|▎         | 3/102 [00:29<16:16,  9.86s/it]
+cifar10-svhn_0.031:   4%|▍         | 4/102 [00:39<15:58,  9.78s/it]
+cifar10-svhn_0.031:   5%|▍         | 5/102 [00:49<15:44,  9.74s/it]
+cifar10-svhn_0.031:   6%|▌         | 6/102 [00:58<15:32,  9.72s/it]
+cifar10-svhn_0.031:   7%|▋         | 7/102 [01:08<15:21,  9.70s/it]
+cifar10-svhn_0.031:   8%|▊         | 8/102 [01:18<15:11,  9.69s/it]
+cifar10-svhn_0.031:   9%|▉         | 9/102 [01:27<15:01,  9.69s/it]
+cifar10-svhn_0.031:  10%|▉         | 10/102 [01:37<14:50,  9.68s/it]
+cifar10-svhn_0.031:  11%|█         | 11/102 [01:47<14:40,  9.68s/it]
+cifar10-svhn_0.031:  12%|█▏        | 12/102 [01:56<14:30,  9.67s/it]
+cifar10-svhn_0.031:  13%|█▎        | 13/102 [02:06<14:21,  9.68s/it]
+cifar10-svhn_0.031:  14%|█▎        | 14/102 [02:16<14:11,  9.68s/it]
+cifar10-svhn_0.031:  15%|█▍        | 15/102 [02:25<14:01,  9.68s/it]
+cifar10-svhn_0.031:  16%|█▌        | 16/102 [02:35<13:51,  9.67s/it]
+cifar10-svhn_0.031:  17%|█▋        | 17/102 [02:45<13:42,  9.67s/it]
+cifar10-svhn_0.031:  18%|█▊        | 18/102 [02:54<13:32,  9.67s/it]
+cifar10-svhn_0.031:  19%|█▊        | 19/102 [03:04<13:22,  9.67s/it]
+cifar10-svhn_0.031:  20%|█▉        | 20/102 [03:14<13:13,  9.67s/it]
+cifar10-svhn_0.031:  21%|██        | 21/102 [03:23<13:03,  9.67s/it]
+cifar10-svhn_0.031:  22%|██▏       | 22/102 [03:33<12:53,  9.67s/it]
+cifar10-svhn_0.031:  23%|██▎       | 23/102 [03:43<12:43,  9.67s/it]
+cifar10-svhn_0.031:  24%|██▎       | 24/102 [03:52<12:34,  9.67s/it]
+cifar10-svhn_0.031:  25%|██▍       | 25/102 [04:02<12:24,  9.67s/it]
+cifar10-svhn_0.031:  25%|██▌       | 26/102 [04:12<12:14,  9.67s/it]
+cifar10-svhn_0.031:  26%|██▋       | 27/102 [04:21<12:05,  9.67s/it]
+cifar10-svhn_0.031:  27%|██▋       | 28/102 [04:31<11:55,  9.67s/it]
+cifar10-svhn_0.031:  28%|██▊       | 29/102 [04:41<11:45,  9.67s/it]
+cifar10-svhn_0.031:  29%|██▉       | 30/102 [04:50<11:35,  9.67s/it]
+cifar10-svhn_0.031:  30%|███       | 31/102 [05:00<11:26,  9.67s/it]
+cifar10-svhn_0.031:  31%|███▏      | 32/102 [05:10<11:16,  9.67s/it]
+cifar10-svhn_0.031:  32%|███▏      | 33/102 [05:19<11:07,  9.67s/it]
+cifar10-svhn_0.031:  33%|███▎      | 34/102 [05:29<10:57,  9.67s/it]
+cifar10-svhn_0.031:  34%|███▍      | 35/102 [05:39<10:47,  9.67s/it]
+cifar10-svhn_0.031:  35%|███▌      | 36/102 [05:48<10:38,  9.67s/it]
+cifar10-svhn_0.031:  36%|███▋      | 37/102 [05:58<10:28,  9.67s/it]
+cifar10-svhn_0.031:  37%|███▋      | 38/102 [06:08<10:19,  9.67s/it]
+cifar10-svhn_0.031:  38%|███▊      | 39/102 [06:17<10:09,  9.67s/it]
+cifar10-svhn_0.031:  39%|███▉      | 40/102 [06:27<09:59,  9.67s/it]
+cifar10-svhn_0.031:  40%|████      | 41/102 [06:37<09:49,  9.67s/it]
+cifar10-svhn_0.031:  41%|████      | 42/102 [06:47<09:40,  9.67s/it]
+cifar10-svhn_0.031:  42%|████▏     | 43/102 [06:56<09:30,  9.67s/it]
+cifar10-svhn_0.031:  43%|████▎     | 44/102 [07:06<09:20,  9.67s/it]
+cifar10-svhn_0.031:  44%|████▍     | 45/102 [07:16<09:11,  9.67s/it]
+cifar10-svhn_0.031:  45%|████▌     | 46/102 [07:25<09:01,  9.67s/it]
+cifar10-svhn_0.031:  46%|████▌     | 47/102 [07:35<08:52,  9.67s/it]
+cifar10-svhn_0.031:  47%|████▋     | 48/102 [07:45<08:42,  9.67s/it]
+cifar10-svhn_0.031:  48%|████▊     | 49/102 [07:54<08:32,  9.67s/it]
+cifar10-svhn_0.031:  49%|████▉     | 50/102 [08:04<08:22,  9.67s/it]
+cifar10-svhn_0.031:  50%|█████     | 51/102 [08:14<08:13,  9.67s/it]
+cifar10-svhn_0.031:  51%|█████     | 52/102 [08:23<08:03,  9.67s/it]
+cifar10-svhn_0.031:  52%|█████▏    | 53/102 [08:33<07:53,  9.67s/it]
+cifar10-svhn_0.031:  53%|█████▎    | 54/102 [08:43<07:44,  9.67s/it]
+cifar10-svhn_0.031:  54%|█████▍    | 55/102 [08:52<07:34,  9.67s/it]
+cifar10-svhn_0.031:  55%|█████▍    | 56/102 [09:02<07:24,  9.67s/it]
+cifar10-svhn_0.031:  56%|█████▌    | 57/102 [09:12<07:15,  9.67s/it]
+cifar10-svhn_0.031:  57%|█████▋    | 58/102 [09:21<07:05,  9.67s/it]
+cifar10-svhn_0.031:  58%|█████▊    | 59/102 [09:31<06:55,  9.67s/it]
+cifar10-svhn_0.031:  59%|█████▉    | 60/102 [09:41<06:46,  9.67s/it]
+cifar10-svhn_0.031:  60%|█████▉    | 61/102 [09:50<06:36,  9.67s/it]
+cifar10-svhn_0.031:  61%|██████    | 62/102 [10:00<06:26,  9.67s/it]
+cifar10-svhn_0.031:  62%|██████▏   | 63/102 [10:10<06:17,  9.67s/it]
+cifar10-svhn_0.031:  63%|██████▎   | 64/102 [10:19<06:07,  9.67s/it]
+cifar10-svhn_0.031:  64%|██████▎   | 65/102 [10:29<05:57,  9.67s/it]
+cifar10-svhn_0.031:  65%|██████▍   | 66/102 [10:39<05:48,  9.67s/it]
+cifar10-svhn_0.031:  66%|██████▌   | 67/102 [10:48<05:38,  9.67s/it]
+cifar10-svhn_0.031:  67%|██████▋   | 68/102 [10:58<05:28,  9.67s/it]
+cifar10-svhn_0.031:  68%|██████▊   | 69/102 [11:08<05:18,  9.67s/it]
+cifar10-svhn_0.031:  69%|██████▊   | 70/102 [11:17<05:09,  9.67s/it]
+cifar10-svhn_0.031:  70%|██████▉   | 71/102 [11:27<04:59,  9.67s/it]
+cifar10-svhn_0.031:  71%|███████   | 72/102 [11:37<04:50,  9.67s/it]
+cifar10-svhn_0.031:  72%|███████▏  | 73/102 [11:46<04:40,  9.67s/it]
+cifar10-svhn_0.031:  73%|███████▎  | 74/102 [11:56<04:30,  9.67s/it]
+cifar10-svhn_0.031:  74%|███████▎  | 75/102 [12:06<04:21,  9.67s/it]
+cifar10-svhn_0.031:  75%|███████▍  | 76/102 [12:15<04:11,  9.67s/it]
+cifar10-svhn_0.031:  75%|███████▌  | 77/102 [12:25<04:01,  9.67s/it]
+cifar10-svhn_0.031:  76%|███████▋  | 78/102 [12:35<03:52,  9.67s/it]
+cifar10-svhn_0.031:  77%|███████▋  | 79/102 [12:44<03:42,  9.67s/it]
+cifar10-svhn_0.031:  78%|███████▊  | 80/102 [12:54<03:32,  9.67s/it]
+cifar10-svhn_0.031:  79%|███████▉  | 81/102 [13:04<03:23,  9.67s/it]
+cifar10-svhn_0.031:  80%|████████  | 82/102 [13:13<03:13,  9.67s/it]
+cifar10-svhn_0.031:  81%|████████▏ | 83/102 [13:23<03:03,  9.67s/it]
+cifar10-svhn_0.031:  82%|████████▏ | 84/102 [13:33<02:54,  9.67s/it]
+cifar10-svhn_0.031:  83%|████████▎ | 85/102 [13:42<02:44,  9.67s/it]
+cifar10-svhn_0.031:  84%|████████▍ | 86/102 [13:52<02:34,  9.67s/it]
+cifar10-svhn_0.031:  85%|████████▌ | 87/102 [14:02<02:24,  9.67s/it]
+cifar10-svhn_0.031:  86%|████████▋ | 88/102 [14:11<02:15,  9.66s/it]
+cifar10-svhn_0.031:  87%|████████▋ | 89/102 [14:21<02:05,  9.67s/it]
+cifar10-svhn_0.031:  88%|████████▊ | 90/102 [14:31<01:56,  9.67s/it]
+cifar10-svhn_0.031:  89%|████████▉ | 91/102 [14:40<01:46,  9.67s/it]
+cifar10-svhn_0.031:  90%|█████████ | 92/102 [14:50<01:36,  9.67s/it]
+cifar10-svhn_0.031:  91%|█████████ | 93/102 [15:00<01:26,  9.67s/it]
+cifar10-svhn_0.031:  92%|█████████▏| 94/102 [15:09<01:17,  9.67s/it]
+cifar10-svhn_0.031:  93%|█████████▎| 95/102 [15:19<01:07,  9.66s/it]
+cifar10-svhn_0.031:  94%|█████████▍| 96/102 [15:29<00:57,  9.66s/it]
+cifar10-svhn_0.031:  95%|█████████▌| 97/102 [15:38<00:48,  9.66s/it]
+cifar10-svhn_0.031:  96%|█████████▌| 98/102 [15:48<00:38,  9.67s/it]
+cifar10-svhn_0.031:  97%|█████████▋| 99/102 [15:58<00:28,  9.66s/it]
+cifar10-svhn_0.031:  98%|█████████▊| 100/102 [16:07<00:19,  9.66s/it]
+cifar10-svhn_0.031:  99%|█████████▉| 101/102 [16:17<00:09,  9.66s/it]
+cifar10-svhn_0.031: 100%|██████████| 102/102 [16:24<00:00,  8.92s/it]
+cifar10-svhn_0.031: 100%|██████████| 102/102 [16:24<00:00,  9.65s/it]
+
+dataset: cifar10-svhn
+
+just in attacked
+eps= 0.0 : 0.9109230216656422
+TPR at 0.95 TNR 0.6232329440688383
+eps= 0.0313 : 0.7171663606330669
+
+just out attacked
+eps= 0.0 : 0.9109230216656422
+eps= 0.0313 : 0.6493653311309158
+
+both attacked
+eps= 0.0 : 0.9109230216656422
+eps= 0.0313 : 0.38043941303011675

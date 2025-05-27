@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import DataLoader, random_split
 import torchvision
 from torchvision import transforms
+from .dataset import DSET
 
 def get_in_training_loaders(in_dataset, batch_size):
 
@@ -15,6 +16,12 @@ def get_in_training_loaders(in_dataset, batch_size):
 
     elif in_dataset == 'TI':
         dataset = torchvision.datasets.ImageFolder(root = './data/tiny-imagenet-200/train', transform=transforms.Compose([transforms.Resize(32), transforms.ToTensor()]))
+
+    elif in_dataset == 'svhn':
+        data_wrapper = DSET('SVHN', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        dataset = data_wrapper.ind_train
+        print(f"SVHN dataset loaded with {len(dataset)} samples.")
+
 
     train_size = int(0.9 * len(dataset))
     test_size = len(dataset) - train_size
@@ -37,7 +44,13 @@ def get_in_testing_loader(in_dataset, batch_size):
                                           download=True, transform=transforms.ToTensor())
 
     elif in_dataset == 'TI':
-        testset = torchvision.datasets.ImageFolder(root = './data/tiny-imagenet-200/val', transform=transforms.Compose([transforms.Resize(32), transforms.ToTensor()]))
+        testset = torchvision.datasets.ImageFolder(root = './data/tiny-imagenet-200/val', 
+                                                   transform=transforms.Compose([transforms.Resize(32), transforms.ToTensor()]))
+
+    elif in_dataset == 'svhn':
+        data_wrapper = DSET('SVHN', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        testset = data_wrapper.ind_val
+        print(f"SVHN InD test dataset loaded with {len(testset)} samples.")
 
     testloader = DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=2)
 

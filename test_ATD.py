@@ -20,7 +20,8 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_type', default='fea', type=str, choices={'fea', 'pix'})
     parser.add_argument('--training_type', default='adv', type=str, choices={'clean', 'adv'})
-    parser.add_argument('--in_dataset', default='cifar10', type=str, choices={'cifar10', 'cifar100', 'TI', 'cifar10-svhn'})
+    parser.add_argument('--in_dataset', default='cifar10', type=str, choices={'cifar10', 'cifar100', 'TI', 'cifar10-svhn',
+                                                                              'svhn'})
     parser.add_argument("--out_datasets", nargs='+', default=['mnist', 'tiny_imagenet', 'places', 'LSUN', 'iSUN', 'birds', 'flowers', 'coil'])
     
     parser.add_argument('--batch_size', default=128, type=int)
@@ -151,6 +152,10 @@ for i, score_out_dataset in enumerate(scores_out):
         scores = np.concatenate([score_out, score_in],axis=0)
         auroc = roc_auc_score(onehots, -scores)
         print('eps=', epsilons[k], ':', auroc)
+        if epsilons[k] == 0:
+            tnr_threshold = np.quantile(score_in, 0.05)
+            tpr = np.sum(score_out < tnr_threshold) / len(score_out)
+            print('TPR at 0.95 TNR', tpr)
 
 
     print('\njust out attacked')
