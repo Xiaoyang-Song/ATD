@@ -6,15 +6,15 @@ import numpy as np
 ACCOUNT = 'sunwbgt0'
 TIME = "4:00:00"
 # Configuration
-# EXP_DSET = 'fmnist'
-# EXP_DSET = 'fmnist-R2'
+# EXP_DSET = 'fashionmnist'
+# EXP_DSET = 'fashionmnist-R2'
 # EXP_DSET = 'cifar10-svhn'
-EXP_DSET = 'mnist'
+# EXP_DSET = 'mnist'
 # EXP_DSET = 'mnist-fashionmnist' 
 # EXP_DSET = 'svhn' 
-# EXP_DSET = 'svhn-R2'
-# regime = 'Imbalanced'
-regime = 'Balanced'
+EXP_DSET = 'svhn-R2'
+regime = 'Imbalanced'
+# regime = 'Balanced'
 
 
 N = [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]

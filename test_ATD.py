@@ -21,7 +21,8 @@ def get_args():
     parser.add_argument('--model_type', default='fea', type=str, choices={'fea', 'pix'})
     parser.add_argument('--training_type', default='adv', type=str, choices={'clean', 'adv'})
     parser.add_argument('--in_dataset', default='cifar10', type=str, choices={'cifar10', 'cifar100', 'TI', 'cifar10-svhn',
-                                                                              'svhn'})
+                                                                              'svhn', 'mnist', 'fashionmnist', 'mnist-fashionmnist',
+                                                                              'fashionmnist-R2', 'svhn-R2'})
     parser.add_argument("--out_datasets", nargs='+', default=['mnist', 'tiny_imagenet', 'places', 'LSUN', 'iSUN', 'birds', 'flowers', 'coil'])
     
     parser.add_argument('--batch_size', default=128, type=int)

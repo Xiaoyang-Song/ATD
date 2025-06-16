@@ -5,6 +5,7 @@ import torchvision
 from torchvision import transforms
 from .dataset import DSET
 import os
+import torch.nn.functional as F
 import numpy as np
 from collections import Counter
 
@@ -39,7 +40,7 @@ def get_out_training_loaders(batch_size, ood_dset=None, regime=None, n_ood=None,
             trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
 
         
-        elif ood_dset == 'svhn':
+        elif ood_dset == 'svhn' or ood_dset == 'svhn-R2':
             assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD SVHN dataset."
             OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "SVHN", f"OOD-{regime}-{n_ood}.pt")
             OoD_data, OoD_labels = torch.load(OoD_path)
@@ -52,7 +53,35 @@ def get_out_training_loaders(batch_size, ood_dset=None, regime=None, n_ood=None,
             assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD MNIST dataset."
             OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "MNIST", f"OOD-{regime}-{n_ood}.pt")
             OoD_data, OoD_labels = torch.load(OoD_path)
-            OoD_data = OoD_data.unsqueeze(1).repeat(1, 3, 1, 1)
+            # print(OoD_data.shape, OoD_labels.shape)
+            OoD_data = OoD_data.repeat(1, 3, 1, 1)
+            OoD_data = F.interpolate(OoD_data, size=(32, 32), mode='bilinear', align_corners=False) # Transform default is bilinear, so this is consistent.
+            print(OoD_data.shape)
+
+            trainset_out = TensorDataset(OoD_data, OoD_labels)
+            print(f"Out-of-distribution dataset size: {len(trainset_out)}")
+            trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)  
+
+        elif ood_dset == 'fashionmnist' or ood_dset == 'fashionmnist-R2':
+            assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD MNIST dataset."
+            OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "FashionMNIST", f"OOD-{regime}-{n_ood}.pt")
+            OoD_data, OoD_labels = torch.load(OoD_path)
+            # print(OoD_data.shape, OoD_labels.shape)
+            OoD_data = OoD_data.repeat(1, 3, 1, 1)
+            OoD_data = F.interpolate(OoD_data, size=(32, 32), mode='bilinear', align_corners=False) # Transform default is bilinear, so this is consistent.
+            print(OoD_data.shape)
+
+            trainset_out = TensorDataset(OoD_data, OoD_labels)
+            print(f"Out-of-distribution dataset size: {len(trainset_out)}")
+            trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)  
+    
+        elif ood_dset == 'mnist-fashionmnist':
+            assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD MNIST dataset."
+            OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "MNIST-FashionMNIST", f"OOD-{regime}-{n_ood}.pt")
+            OoD_data, OoD_labels = torch.load(OoD_path)
+            # print(OoD_data.shape, OoD_labels.shape)
+            OoD_data = OoD_data.repeat(1, 3, 1, 1)
+            OoD_data = F.interpolate(OoD_data, size=(32, 32), mode='bilinear', align_corners=False) # Transform default is bilinear, so this is consistent.
             print(OoD_data.shape)
 
             trainset_out = TensorDataset(OoD_data, OoD_labels)
@@ -109,7 +138,7 @@ def get_out_testing_datasets(out_names):
             returned_out_names.append(name)
             out_datasets.append(dataset)
 
-        elif name == 'fashionmnist':
+        elif name == 'fashionmnist' or name == 'fashionmnist-R2':
             data_wrapper = DSET('FashionMNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
             dataset = data_wrapper.ood_val
             print(f"FashionMNIST OOD testing dataset loaded with {len(dataset)} samples.")
@@ -175,7 +204,7 @@ def get_out_testing_datasets(out_names):
             returned_out_names.append(name)
             out_datasets.append(svhn)
 
-        elif name == 'svhn':
+        elif name == 'svhn' or name == 'svhn-R2':
             data_wrapper = DSET('SVHN', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
             dataset = data_wrapper.ood_val
             print(f"SVHN OOD testing dataset loaded with {len(dataset)} samples.")
