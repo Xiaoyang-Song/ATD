@@ -22,6 +22,21 @@ def get_in_training_loaders(in_dataset, batch_size):
         dataset = data_wrapper.ind_train
         print(f"SVHN dataset loaded with {len(dataset)} samples.")
 
+    elif in_dataset == 'mnist':
+        data_wrapper = DSET('MNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        dataset = data_wrapper.ind_train
+        print(f"MNIST InD train dataset loaded with {len(dataset)} samples.")
+
+    elif in_dataset == 'fashionmnist':
+        data_wrapper = DSET('FashionMNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        dataset = data_wrapper.ind_train
+        print(f"FashionMNIST InD train dataset loaded with {len(dataset)} samples.")
+
+    elif in_dataset == 'mnist-fashionmnist':
+        data_wrapper = DSET('MNIST-FashionMNIST-32', False, 256, 256)
+        dataset = data_wrapper.ind_train
+        print(f"MNIST-FashionMNIST InD train dataset loaded with {len(dataset)} samples.")
+
 
     train_size = int(0.9 * len(dataset))
     test_size = len(dataset) - train_size
@@ -51,6 +66,21 @@ def get_in_testing_loader(in_dataset, batch_size):
         data_wrapper = DSET('SVHN', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
         testset = data_wrapper.ind_val
         print(f"SVHN InD test dataset loaded with {len(testset)} samples.")
+
+    elif in_dataset == 'mnist':
+        data_wrapper = DSET('MNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        testset = data_wrapper.ind_val
+        print(f"MNIST InD test dataset loaded with {len(testset)} samples.")
+
+    elif in_dataset == 'fashionmnist':
+        data_wrapper = DSET('FashionMNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        testset = data_wrapper.ind_val
+        print(f"FashionMNIST InD test dataset loaded with {len(testset)} samples.")
+
+    elif in_dataset == 'mnist-fashionmnist':
+        data_wrapper = DSET('MNIST-FashionMNIST-32', False, 256, 256)
+        testset = data_wrapper.ind_val
+        print(f"MNIST-FashionMNIST InD test dataset loaded with {len(testset)} samples.")
 
     testloader = DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=2)
 

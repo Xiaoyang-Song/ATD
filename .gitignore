@@ -21,3 +21,5 @@ __pycache__/
 data/food-101/
 data/food-101.tar.gz
 *.mat
+
+Datasets/

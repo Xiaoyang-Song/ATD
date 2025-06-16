@@ -36,7 +36,7 @@ def get_feature_extractor_model(training_type, in_dataset):
 
     if training_type == 'adv':
     
-        if in_dataset in ['cifar10', 'cifar10-svhn', 'svhn']:
+        if in_dataset in ['cifar10', 'cifar10-svhn', 'svhn', 'mnist', 'fashionmnist', 'mnist-fashionmnist']:
             model = load_model(model_name='Rade2021Helper_R18_extra', dataset='cifar10', threat_model='Linf').to(device)
             model.logits = torch.nn.Sequential()
             model.eval()

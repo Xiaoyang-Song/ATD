@@ -48,6 +48,17 @@ def get_out_training_loaders(batch_size, ood_dset=None, regime=None, n_ood=None,
             print(f"Out-of-distribution dataset size: {len(trainset_out)}")
             trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)
 
+        elif ood_dset == 'mnist':
+            assert regime is not None and n_ood is not None and valsize is not None, "Please provide regime and n_ood for OOD MNIST dataset."
+            OoD_path = os.path.join("..", "Out-of-Distribution-GANs", "checkpoint", "OOD-Sample", "MNIST", f"OOD-{regime}-{n_ood}.pt")
+            OoD_data, OoD_labels = torch.load(OoD_path)
+            OoD_data = OoD_data.unsqueeze(1).repeat(1, 3, 1, 1)
+            print(OoD_data.shape)
+
+            trainset_out = TensorDataset(OoD_data, OoD_labels)
+            print(f"Out-of-distribution dataset size: {len(trainset_out)}")
+            trainloader_out = DataLoader(trainset_out, batch_size=batch_size, shuffle=True, num_workers=2)  
+
         valset_out = torchvision.datasets.ImageFolder(root = 'data/food-101/images/', loader=food_loader, 
                                                         transform = transforms.Compose([transforms.ToPILImage(),
                                                                                         transforms.RandomChoice(
@@ -86,12 +97,32 @@ def get_out_testing_datasets(out_names):
     for name in out_names:
 
         if name == 'mnist':
-            mnist = torchvision.datasets.MNIST(root='./data', train = False, download = True, transform=transforms.Compose([transforms.ToTensor(),
-                                                                                                  transforms.Resize(32),
-                                                                                                  transforms.Lambda(lambda x : x.repeat(3, 1, 1)),
-                                                                                                  ]))
+            # mnist = torchvision.datasets.MNIST(root='./data', train = False, download = True, transform=transforms.Compose([transforms.ToTensor(),
+            #                                                                                       transforms.Resize(32),
+            #                                                                                       transforms.Lambda(lambda x : x.repeat(3, 1, 1)),
+            #                                                                                       ]))
+            # returned_out_names.append(name)
+            # out_datasets.append(mnist)
+            data_wrapper = DSET('MNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+            dataset = data_wrapper.ood_val
+            print(f"MNIST OOD testing dataset loaded with {len(dataset)} samples.")
             returned_out_names.append(name)
-            out_datasets.append(mnist)
+            out_datasets.append(dataset)
+
+        elif name == 'fashionmnist':
+            data_wrapper = DSET('FashionMNIST32', True, 256, 256, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+            dataset = data_wrapper.ood_val
+            print(f"FashionMNIST OOD testing dataset loaded with {len(dataset)} samples.")
+            returned_out_names.append(name)
+            out_datasets.append(dataset)     
+
+
+        elif name == 'mnist-fashionmnist':
+            data_wrapper = DSET('MNIST-FashionMNIST-32', False, 256, 256)
+            dataset = data_wrapper.ood_val
+            print(f"MNIST-FashionMNIST OOD testing dataset loaded with {len(dataset)} samples.")
+            returned_out_names.append(name)
+            out_datasets.append(dataset)    
         
         elif name == 'tiny_imagenet':
             tiny_imagenet = torchvision.datasets.ImageFolder(root = 'data/tiny-imagenet-200/test', transform=transforms.Compose([transforms.ToTensor(),

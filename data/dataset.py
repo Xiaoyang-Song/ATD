@@ -23,6 +23,20 @@ def FashionMNIST(bs_t, bs_v, sf):
     v_loader = torch.utils.data.DataLoader(vset, shuffle=sf, batch_size=bs_v)
     return tset, vset, t_loader, v_loader
 
+def FashionMNIST32(bs_t, bs_v, sf):
+    tset = torchvision.datasets.FashionMNIST(
+        "./Datasets", download=True, train=True, transform=transforms.Compose([transforms.ToTensor(),
+                                                                   transforms.Resize(32),
+                                                                   transforms.Lambda(lambda x : x.repeat(3, 1, 1)),]))
+    vset = torchvision.datasets.FashionMNIST(
+        "./Datasets", download=False, train=False, transform=transforms.Compose([transforms.ToTensor(),
+                                                                   transforms.Resize(32),
+                                                                   transforms.Lambda(lambda x : x.repeat(3, 1, 1)),]))
+    # Get data loader
+    t_loader = torch.utils.data.DataLoader(tset, shuffle=sf, batch_size=bs_t)
+    v_loader = torch.utils.data.DataLoader(vset, shuffle=sf, batch_size=bs_v)
+    return tset, vset, t_loader, v_loader
+
 
 def MNIST(batch_size, test_batch_size, num_workers=0, shuffle=True):
 
@@ -36,6 +50,24 @@ def MNIST(batch_size, test_batch_size, num_workers=0, shuffle=True):
                                               batch_size=test_batch_size,  num_workers=num_workers)
 
     return train_set, val_set, train_loader, test_loader
+
+def MNIST32(batch_size, test_batch_size, num_workers=0, shuffle=True):
+
+    train_set = torchvision.datasets.MNIST(
+        "./Datasets", download=True, transform=transforms.Compose([transforms.ToTensor(),
+                                                                   transforms.Resize(32),
+                                                                   transforms.Lambda(lambda x : x.repeat(3, 1, 1)),]))
+    val_set = torchvision.datasets.MNIST(
+        "./Datasets", download=True, train=False, transform=transforms.Compose([transforms.ToTensor(),
+                                                                                transforms.Resize(32),
+                                                                                transforms.Lambda(lambda x : x.repeat(3, 1, 1)),]))
+    train_loader = torch.utils.data.DataLoader(train_set, shuffle=shuffle,
+                                               batch_size=batch_size, num_workers=num_workers)
+    test_loader = torch.utils.data.DataLoader(val_set, shuffle=shuffle,
+                                              batch_size=test_batch_size,  num_workers=num_workers)
+    return train_set, val_set, train_loader, test_loader
+    
+    
 
 
 def CIFAR100(batch_size, test_batch_size):
@@ -172,17 +204,19 @@ class DSET():
         self.initialize()
 
     def initialize(self):
-        if self.name in ['MNIST', 'FashionMNIST', 'SVHN']:
+        if self.name in ['MNIST', 'FashionMNIST', 'MNIST32', 'FashionMNIST32', 'SVHN']:
 
             assert self.ind is not None and self.ood is not None
             if self.name == 'MNIST':
                 dset_tri, dset_val, _, _ = MNIST(self.bsz_tri, self.bsz_val)
-
+            elif self.name == 'MNIST32':
+                dset_tri, dset_val, _, _ = MNIST32(self.bsz_tri, self.bsz_val)
+            elif self.name == 'FashionMNIST32':
+                dset_tri, dset_val, _, _ = FashionMNIST32(self.bsz_tri, self.bsz_val, True)
             elif self.name == "SVHN":
                 dset_tri, dset_val, _, _ = SVHN(self.bsz_tri, self.bsz_val)
             else:
-                dset_tri, dset_val, _, _ = FashionMNIST(
-                    self.bsz_tri, self.bsz_val, True)
+                dset_tri, dset_val, _, _ = FashionMNIST(self.bsz_tri, self.bsz_val, True)
             self.train = dset_by_class(dset_tri)
             self.val = dset_by_class(dset_val)
             # The following code is for within-dataset InD/OoD separation
@@ -205,6 +239,14 @@ class DSET():
             self.ind_train, self.ind_val, self.ind_train_loader, self.ind_val_loader = MNIST(
                 self.bsz_tri, self.bsz_val)
             self.ood_train, self.ood_val, _, self.ood_val_loader = FashionMNIST(
+                self.bsz_tri, self.bsz_val, True)
+            self.ood_train_by_class = dset_by_class(
+                self.ood_train)  # this is used for sampling
+
+        elif self.name == 'MNIST-FashionMNIST-32':
+            self.ind_train, self.ind_val, self.ind_train_loader, self.ind_val_loader = MNIST32(
+                self.bsz_tri, self.bsz_val)
+            self.ood_train, self.ood_val, _, self.ood_val_loader = FashionMNIST32(
                 self.bsz_tri, self.bsz_val, True)
             self.ood_train_by_class = dset_by_class(
                 self.ood_train)  # this is used for sampling
