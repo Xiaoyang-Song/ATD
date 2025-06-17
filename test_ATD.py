@@ -158,6 +158,10 @@ for i, score_out_dataset in enumerate(scores_out):
             tpr = np.sum(score_out < tnr_threshold) / len(score_out)
             print('TPR at 0.95 TNR', tpr)
 
+            tnr_threshold = np.quantile(score_in, 0.01)
+            tpr = np.sum(score_out < tnr_threshold) / len(score_out)
+            print('TPR at 0.99 TNR', tpr)
+
 
     print('\njust out attacked')
     score_in = scores_in[0]
