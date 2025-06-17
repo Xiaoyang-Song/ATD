@@ -4,7 +4,7 @@ import numpy as np
 
 # GL
 ACCOUNT = 'sunwbgt0'
-TIME = "1:00:00"
+TIME = "00:30:00"
 # Configuration
 # EXP_DSET = 'fashionmnist'
 # EXP_DSET = 'fashionmnist-R2'
