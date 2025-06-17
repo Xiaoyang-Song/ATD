@@ -11,8 +11,8 @@
 #SBATCH --time=4:00:00
 #SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/ATD/out/mnist-Balanced/8.log
 
-python train_ATD.py  --run_name mnist --model_type "fea" --training_type "adv" \
+python train_ATD.py  --run_name mnist-Balanced-8 --model_type "fea" --training_type "adv" \
         --in_dataset mnist --alpha 0.5 --batch_size 256 --num_epochs 20 --eps 0.0313 --attack_iters 10 \
         --regime Balanced --ood_dset mnist --n_ood 8 --valsize 10000
-python test_ATD.py  --run_name mnist --model_type "fea" --in_dataset mnist --batch_size 256 --eps 0.0313 --attack_iters 100 \
+python test_ATD.py  --run_name mnist-Balanced-8 --model_type "fea" --in_dataset mnist --batch_size 256 --eps 0.0313 --attack_iters 100 \
             --out_datasets mnist

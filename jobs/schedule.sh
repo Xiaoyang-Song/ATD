@@ -1,7 +1,5 @@
 
 
-
-
 sbatch jobs/mnist/8.sh
 sbatch jobs/mnist/16.sh
 sbatch jobs/mnist/32.sh
