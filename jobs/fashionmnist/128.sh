@@ -7,8 +7,8 @@
 #SBATCH --nodes=1
 #SBATCH --partition=gpu
 #SBATCH --gpus=1
-#SBATCH --mem-per-gpu=16GB
-#SBATCH --time=4:00:00
+#SBATCH --mem-per-gpu=10GB
+#SBATCH --time=2:00:00
 #SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/ATD/out/fashionmnist-Balanced/128.log
 
 python train_ATD.py  --run_name fashionmnist-Balanced-128 --model_type "fea" --training_type "adv" \
